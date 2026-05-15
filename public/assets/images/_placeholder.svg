@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <rect width="100%" height="100%" fill="#fff8e7"/>
+  <rect x="80" y="80" width="2400" height="1280" fill="none" stroke="rgba(11,61,46,0.2)" stroke-width="4" stroke-dasharray="24 18"/>
+  <text x="50%" y="50%" fill="rgba(11,61,46,0.35)" font-family="system-ui, sans-serif" font-size="42" text-anchor="middle">
+    image placeholder — replace files under public/assets/images (see README files)
+  </text>
+</svg>

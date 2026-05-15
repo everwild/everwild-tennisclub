@@ -1,0 +1,240 @@
+:root {
+  --bg: var(--page-bg, #fff8e7);
+  --panel: var(--surface-raised, #fff8e7);
+  --panel-strong: var(--page-bg, #fff8e7);
+  --border: var(--border-subtle, #b8cfc4);
+  --text: var(--text-heading, #0b3d2e);
+  --muted: var(--text-muted, #3d5249);
+  --soft: var(--text-soft, #5c7168);
+  --brand-soft: var(--page-bg, #fff8e7);
+  --legal-width: min(92vw, 980px);
+  --header-offset: 6.75rem;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  padding: 0 0 4rem;
+}
+
+.legal-shell {
+  width: var(--legal-width);
+  margin: 0 auto;
+}
+
+.legal-hero {
+  padding: calc(var(--header-offset) + 1.8rem) 0 2.5rem;
+  text-align: center;
+}
+
+.legal-kicker {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--soft);
+  font-size: clamp(1.08rem, 1.15vw, 1.28rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.legal-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.7vw, 3.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  font-weight: var(--font-heading-weight);
+}
+
+.legal-intro {
+  max-width: 43rem;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  font-size: clamp(1.14rem, 1.18vw, 1.28rem);
+  line-height: 1.8;
+}
+
+.legal-body {
+  padding-bottom: 1rem;
+}
+
+.legal-content {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.legal-block {
+  padding-bottom: 1.45rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-block:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.legal-block h2 {
+  margin: 0 0 0.78rem;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  font-weight: var(--font-heading-weight);
+}
+
+.legal-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.82;
+}
+
+.legal-block p + p {
+  margin-top: 0.82rem;
+}
+
+.legal-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.legal-definition {
+  margin: 0;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.legal-definition div {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.legal-definition dt {
+  color: var(--soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.legal-definition dd {
+  margin: 0;
+  color: var(--text-body, #1a2e28);
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.legal-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-card {
+  position: relative;
+  padding: 1.4rem 1.45rem 1.5rem;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--card-border, #5b2c83);
+  background: var(--panel);
+  box-shadow: none;
+}
+
+.legal-card::before {
+  content: none;
+}
+
+.legal-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.82rem;
+}
+
+.legal-index {
+  color: var(--brand-hot, #0b3d2e);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.legal-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.legal-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.legal-card p + p {
+  margin-top: 0.8rem;
+}
+
+.legal-callout {
+  margin-top: 1.4rem;
+  padding: 1rem 1.05rem;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--card-border, #5b2c83);
+  background: var(--brand-soft);
+  color: var(--text-body, #1a2e28);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.legal-footer {
+  padding: 2rem 0 2.6rem;
+}
+
+.legal-footer .shell {
+  width: var(--content-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --header-offset: 5.55rem;
+  }
+
+  .legal-hero {
+    padding-top: calc(var(--header-offset) + 1.1rem);
+    padding-bottom: 2rem;
+  }
+
+  .legal-content {
+    gap: 1.45rem;
+  }
+
+  .legal-block {
+    padding-bottom: 1.2rem;
+  }
+
+  .legal-footer .shell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+html:lang(zh) .legal-kicker,
+html[lang^="zh-"] .legal-kicker {
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
