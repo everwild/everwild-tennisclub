@@ -1,4 +1,18 @@
-# Deployment (Vercel + custom domain)
+# Deployment
+
+## GitHub Pages (`everwild/everwild-tennisclub`)
+
+GitHub Pages must deploy the **built static files** in `out/`, not the repo root (otherwise you only see the README).
+
+1. In the repo on GitHub: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `master` (or run the **Deploy to GitHub Pages** workflow manually). The workflow [`.github/workflows/deploy-gh-pages.yml`](.github/workflows/deploy-gh-pages.yml) runs `npm run build` and uploads `out/`.
+3. Site URL: **https://everwild.github.io/everwild-tennisclub/** (project Pages uses `basePath` `/everwild-tennisclub`).
+
+For a custom domain later, use Vercel or set Pages to a custom domain and drop `NEXT_PUBLIC_BASE_PATH` from the workflow.
+
+---
+
+## Vercel + custom domain
 
 ## 1. Production URL in code
 

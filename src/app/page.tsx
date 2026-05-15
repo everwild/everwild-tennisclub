@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { BASE_PATH } from "@/lib/base-path";
+
+const zhHome = `${BASE_PATH}/zh/`.replace(/\/{2,}/g, "/");
 
 export default function RootPage() {
   return (
@@ -7,7 +10,11 @@ export default function RootPage() {
       <Link href="/zh/" className="text-sm font-semibold text-[#0b3d2e] underline-offset-4 hover:underline">
         Continue in Chinese (中文)
       </Link>
-      <script dangerouslySetInnerHTML={{ __html: "window.location.replace('/zh/');" }} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.location.replace(${JSON.stringify(zhHome)});`
+        }}
+      />
     </main>
   );
 }

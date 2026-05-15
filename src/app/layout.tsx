@@ -3,6 +3,7 @@ import "./globals.css";
 import "@/styles/site-core.css";
 import "@/styles/home.css";
 import "@/styles/tennis-overrides.css";
+import { BASE_PATH } from "@/lib/base-path";
 import { DOCUMENT_TITLE } from "@/lib/metadata";
 import { SITE_ORIGIN } from "@/lib/site";
 
@@ -40,7 +41,11 @@ export default function RootLayout({
   const earlyHtmlAttrsScript = `
     (function () {
       try {
+        var base = ${JSON.stringify(BASE_PATH)};
         var p = (window.location && window.location.pathname) || "/";
+        if (base && p.indexOf(base) === 0) {
+          p = p.slice(base.length) || "/";
+        }
         var m = p.match(/^\\/(ja|en|zh)(?:\\/|$)/i);
         var lang = m ? m[1].toLowerCase() : "zh";
         document.documentElement.lang =

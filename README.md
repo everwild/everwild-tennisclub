@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# everwild-tennisclub
 
-## Getting Started
+Static marketing site for **EVERWILD Tennis Club (ETC)** — courts, coaching, and community. Built with Next.js (App Router), TypeScript, and Tailwind CSS, aligned with the [everwild-runningclub-next](https://github.com/everwild/everwild-runningclub-next) layout patterns.
 
-First, run the development server:
+- **Output:** static export (`out/`) — suitable for Vercel, S3, or any static host  
+- **Languages:** `ja`, `en`, `zh` under `/[lang]/`  
+- **Default entry:** `/` redirects to `/zh/`
+
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/zh/](http://localhost:3000/zh/) (or `/ja/`, `/en/`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # produces static files in out/
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuration
 
-## Learn More
+| Item | Location |
+|------|----------|
+| Production URL (canonical, OG) | [`src/lib/site.ts`](src/lib/site.ts) — `SITE_ORIGIN` |
+| Contact form (optional) | Env `NEXT_PUBLIC_FORMSPREE_ENDPOINT` (Formspree) |
+| Image paths & placeholders | [`src/config/tennis-assets.ts`](src/config/tennis-assets.ts) |
+| Copy / i18n | [`src/messages/`](src/messages/) |
 
-To learn more about Next.js, take a look at the following resources:
+Before launch, replace `SITE_ORIGIN` with your real domain (e.g. `https://www.example.com`, no trailing slash).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/app/[lang]/     Home, contact, legal, privacy, terms
+src/components/     SiteHeader, SiteFooter, home sections
+src/styles/         site-core.css, home.css, overrides
+public/assets/images/   Drop images here (see README files in each folder)
+```
 
-## Deploy on Vercel
+Browser tab title on all pages: **ETC · EVERWILD Tennis Club**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See **[DEPLOY.md](./DEPLOY.md)** for Vercel, custom domain, Formspree, and replacing media placeholders.
+
+## Repository
+
+https://github.com/everwild/everwild-tennisclub
