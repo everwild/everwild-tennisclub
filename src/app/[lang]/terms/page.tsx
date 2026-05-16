@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { LegalFooter } from "@/components/LegalFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { htmlLangForUiLang, isLang, type Lang } from "@/lib/lang";
+import { siteNavLabels } from "@/lib/siteHeaderLabels";
 import { DOCUMENT_TITLE } from "@/lib/metadata";
 import { SITE_ORIGIN } from "@/lib/site";
 import { termsCopy } from "@/messages/termsCopy";
@@ -44,7 +45,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
 
   return (
     <>
-      <SiteHeader lang={lang} labels={t} brandStrong="ETC" />
+      <SiteHeader lang={lang} labels={siteNavLabels(lang)} brandStrong="ETC" />
       <main>
         <section className="legal-hero">
           <div className="legal-shell">

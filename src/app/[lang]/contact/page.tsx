@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { isLang, type Lang } from "@/lib/lang";
 import { pageMetadata } from "@/lib/metadata";
-import { toSiteHeaderLabels } from "@/lib/siteHeaderLabels";
+import { siteNavLabels } from "@/lib/siteHeaderLabels";
 import { getStrings } from "@/messages/strings";
 import { tennisHomeCopy } from "@/messages/tennisHomeCopy";
 import "@/styles/contact-page.css";
@@ -41,7 +41,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
   return (
     <>
-      <SiteHeader lang={lang} labels={toSiteHeaderLabels(homeT)} />
+      <SiteHeader lang={lang} labels={siteNavLabels(lang)} />
       <main className="contact-page-main">
         <div className="shell" style={{ paddingTop: "clamp(5.5rem, 10vw, 7rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)" }}>
           <div className="contact-page-grid">

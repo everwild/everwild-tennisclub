@@ -533,6 +533,26 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
     display: none !important;
   }
 
+  /*
+    Absolutely positioned `.nav-links` uses shrink-to-fit width; long JP/CJK labels then
+    compress flex items and wrap text. Pin to content width + nowrap so one row stays one row.
+  */
+  .nav-links {
+    width: max-content;
+    box-sizing: border-box;
+  }
+
+  .nav-links a {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  html:lang(ja),
+  html[lang^="ja-"] {
+    --header-nav-gap: 0.72rem;
+    --header-link-font-size: 0.8rem;
+    --header-link-letter-spacing: 0.04em;
+  }
 }
 
 @media (min-width: 1280px) {

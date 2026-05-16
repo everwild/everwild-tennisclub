@@ -183,7 +183,7 @@ export function SiteHeader({
                   className={code === lang ? "is-active" : ""}
                   aria-pressed={code === lang ? "true" : "false"}
                   onClick={() => {
-                    router.push(langHref(code));
+                    router.push(langHref(code), { scroll: false });
                     close();
                   }}
                 >

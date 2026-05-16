@@ -61,8 +61,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     },
     footer: {
       rights: "© EVERWILD Tennis Club. All rights reserved.",
-      privacy: "プライバシー（準備中）",
-      terms: "利用規約（準備中）"
+      privacy: "プライバシーポリシー",
+      terms: "利用規約"
     },
     home: {
       pageTitle: "ホーム",
@@ -114,11 +114,12 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     contact: {
       pageTitle: "お問い合わせ",
       title: "ご連絡ください",
-      lead: "見学、体験レッスン、法人利用のご相談はこちらから。",
+      lead:
+        "体験・見学や入会のご希望は、まずこのページからご連絡ください。スタッフがプログラム内容と次のステップをご案内します。",
       address: "〒000-0000 東京都（プレースホルダー）",
       phone: "+81 00-0000-0000",
       email: "hello@example.com",
-      hours: "平日 10:00–20:00 / 土日 9:00–18:00",
+      hours: "受付時間の目安：平日 10:00–20:00 / 土日 9:00–18:00（確定スケジュールは返信時に調整）",
       labelAddress: "住所",
       labelPhone: "電話",
       labelEmail: "メール",
@@ -128,7 +129,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
       formEmail: "メール",
       formMessage: "メッセージ",
       formSubmit: "送信",
-      formNote: "フォーム送信には Formspree のエンドポイント設定が必要です（README 参照）。",
+      formNote:
+        "フォーム送信には Formspree のエンドポイント設定が必要です（README 参照）。設定前でもメールで同様にお問い合わせいただけます。",
       formSent: "送信しました。ありがとうございます。",
       formFailed: "送信に失敗しました。時間をおいて再度お試しください。"
     }
@@ -146,8 +148,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     },
     footer: {
       rights: "© EVERWILD Tennis Club. All rights reserved.",
-      privacy: "Privacy (coming soon)",
-      terms: "Terms (coming soon)"
+      privacy: "Privacy Policy",
+      terms: "Terms of Use"
     },
     home: {
       pageTitle: "Home",
@@ -199,11 +201,12 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     contact: {
       pageTitle: "Contact",
       title: "We would love to hear from you",
-      lead: "Tours, trial lessons, and corporate bookings—reach out any time.",
+      lead:
+        "Share your goals for a tour, trial lesson, or membership—staff will follow up with programming details and next steps.",
       address: "123 Placeholder Ave, City, ST 00000",
       phone: "+1 (000) 000-0000",
       email: "hello@example.com",
-      hours: "Mon–Fri 10:00–20:00 / Sat–Sun 9:00–18:00",
+      hours: "Typical hours: Mon–Fri 10:00–20:00 / Sat–Sun 9:00–18:00 (exact timing confirmed in replies)",
       labelAddress: "Address",
       labelPhone: "Phone",
       labelEmail: "Email",
@@ -213,7 +216,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
       formEmail: "Email",
       formMessage: "Message",
       formSubmit: "Send",
-      formNote: "To enable the contact form, set NEXT_PUBLIC_FORMSPREE_ENDPOINT (see README).",
+      formNote:
+        "To enable the contact form, set NEXT_PUBLIC_FORMSPREE_ENDPOINT (see README). You can also email us directly while it is being configured.",
       formSent: "Thanks — your message was sent.",
       formFailed: "Something went wrong. Please try again later."
     }
@@ -223,7 +227,7 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     siteTagline: "场地、教练与社群，一站齐备。",
     nav: {
       home: "首页",
-      about: "关于我们",
+      about: "关于俱乐部",
       coaches: "教练团队",
       facilities: "场地设施",
       gallery: "图集",
@@ -231,8 +235,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     },
     footer: {
       rights: "© EVERWILD Tennis Club. 保留所有权利。",
-      privacy: "隐私政策（即将上线）",
-      terms: "使用条款（即将上线）"
+      privacy: "隐私政策",
+      terms: "使用条款"
     },
     home: {
       pageTitle: "首页",
@@ -283,11 +287,12 @@ export const STRINGS: Record<Lang, SiteStrings> = {
     contact: {
       pageTitle: "联系我们",
       title: "欢迎来信或到访",
-      lead: "参观场地、体验课、企业/团体合作，均可通过以下方式联系。",
+      lead:
+        "体验课、场地参观或入会意向，请先在本页留言或发邮件；工作人员会说明课程框架并协助安排后续步骤。",
       address: "中国某某市某某路 123 号（占位）",
       phone: "+86 000-0000-0000",
       email: "hello@example.com",
-      hours: "周一至周五 10:00–20:00 / 周末 9:00–18:00",
+      hours: "接听时间参考：周一至周五 10:00–20:00 / 周末 9:00–18:00（具体时间以邮件／电话回复确认为准）",
       labelAddress: "地址",
       labelPhone: "电话",
       labelEmail: "邮箱",
@@ -297,7 +302,8 @@ export const STRINGS: Record<Lang, SiteStrings> = {
       formEmail: "邮箱",
       formMessage: "留言",
       formSubmit: "发送",
-      formNote: "如需启用在线表单，请配置环境变量 NEXT_PUBLIC_FORMSPREE_ENDPOINT（见 README）。",
+      formNote:
+        "如需启用在线表单，请配置环境变量 NEXT_PUBLIC_FORMSPREE_ENDPOINT（见 README）。未配置前也可直接发送邮件咨询。",
       formSent: "已发送，感谢你的留言。",
       formFailed: "发送失败，请稍后重试。"
     }

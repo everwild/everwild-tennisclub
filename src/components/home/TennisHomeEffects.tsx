@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 /** Survives `HomeEffects` unmount/remount (e.g. client-side locale switch on `/[lang]/`) so hero height is not re-measured when the viewport is unchanged. Cleared on mobile layout or viewport change vs cached size. */
 type HeroDesktopRuntimeCache = { px: string; vw: number; vh: number };
 let heroDesktopRuntimeCache: HeroDesktopRuntimeCache | null = null;
 
 export function TennisHomeEffects() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const initHeroRuntimeHeight = (root: Element | null) => {

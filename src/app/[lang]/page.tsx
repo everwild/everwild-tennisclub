@@ -6,7 +6,7 @@ import { TennisHomeEffects } from "@/components/home/TennisHomeEffects";
 import { TennisHomeMain } from "@/components/home/TennisHomeMain";
 import { isLang, type Lang } from "@/lib/lang";
 import { pageMetadata } from "@/lib/metadata";
-import { toSiteHeaderLabels } from "@/lib/siteHeaderLabels";
+import { siteNavLabels } from "@/lib/siteHeaderLabels";
 import { SITE_ORIGIN } from "@/lib/site";
 import { tennisHomeCopy } from "@/messages/tennisHomeCopy";
 
@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
   return (
     <>
-      <SiteHeader lang={lang} labels={toSiteHeaderLabels(t)} />
+      <SiteHeader lang={lang} labels={siteNavLabels(lang)} />
       <TennisHomeMain lang={lang} t={t} />
       <SiteFooter lang={lang} t={t} />
       <TennisHomeEffects />
